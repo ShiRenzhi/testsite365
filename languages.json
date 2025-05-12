@@ -1,3 +1,4 @@
+```json
 {
   "en": {
     "nav_home": "Home",
@@ -36,10 +37,15 @@
     "contact_content": "GitHub Pages is static, so forms aren't available yet. Reach me through:",
     "contact_github": "GitHub",
     "contact_email": "Email",
-    "contact_github_desc": "Follow or message me on GitHub",
+    "contact_github descends": "Follow or message me on GitHub",
     "contact_email_desc": "Send me an email",
     "contact_copy_success": "Copied to clipboard!",
     "contact_video": "Watch my video intro",
+    "download_title": "Download Resources",
+    "download_subtitle": "Test Your Download",
+    "download_description": "Click below to download a sample ZIP file and test your browser's download capabilities. Enjoy the sleek design and smooth experience!",
+    "download_button": "Download Sample ZIP",
+    "download_alert": "Download initiated! Check your downloads folder.",
     "footer_copyright": "© 2025 Shirenzhi. All rights reserved.",
     "footer_follow": "Follow me"
   },
@@ -84,7 +90,13 @@
     "contact_email_desc": "给我发送邮件",
     "contact_copy_success": "已复制到剪贴板！",
     "contact_video": "观看我的视频介绍",
+    "download_title": "下载资源",
+    "download_subtitle": "测试你的下载",
+    "download_description": "点击下方下载示例 ZIP 文件，测试你的浏览器下载功能。享受流畅的设计和体验！",
+    "download_button": "下载示例 ZIP",
+    "download_alert": "下载已开始！请检查你的下载文件夹。",
     "footer_copyright": "© 2025 Shirenzhi. 保留所有权利。",
     "footer_follow": "关注我"
   }
 }
+```

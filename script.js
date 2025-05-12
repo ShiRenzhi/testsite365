@@ -1,3 +1,4 @@
+```javascript
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -163,3 +164,17 @@ if (audioPlayer && audioToggle) {
     }
   });
 }
+
+// Download button interaction
+const downloadButton = document.querySelector('.download-btn');
+if (downloadButton) {
+  downloadButton.addEventListener('click', () => {
+    const lang = localStorage.getItem('language') || 'en';
+    fetch('languages.json')
+      .then(response => response.json())
+      .then(languages => {
+        alert(languages[lang]['download_alert'] || 'Download initiated! Check your downloads folder.');
+      });
+  });
+}
+```
