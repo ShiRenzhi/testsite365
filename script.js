@@ -147,3 +147,18 @@ copyButtons.forEach(button => {
     });
   });
 });
+
+// Audio player toggle
+const audioPlayer = document.getElementById('audio-player');
+const audioToggle = document.getElementById('audio-toggle');
+if (audioPlayer && audioToggle) {
+  audioToggle.addEventListener('click', () => {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      audioToggle.textContent = 'Pause';
+    } else {
+      audioPlayer.pause();
+      audioToggle.textContent = 'Play';
+    }
+  });
+}

@@ -30,6 +30,7 @@
     "timeline_event1": "2018: Started learning guitar",
     "timeline_event2": "2020: Composed first song",
     "timeline_event3": "2023: Performed at local concert",
+    "audio_title": "Listen to My Music",
     "contact_title": "Get in Touch",
     "contact_subtitle": "Connect with me today",
     "contact_content": "GitHub Pages is static, so forms aren't available yet. Reach me through:",
@@ -73,6 +74,7 @@
     "timeline_event1": "2018：开始学习吉他",
     "timeline_event2": "2020：创作第一首歌",
     "timeline_event3": "2023：参加本地音乐会演出",
+    "audio_title": "聆听我的音乐",
     "contact_title": "联系我",
     "contact_subtitle": "今天就与我联系",
     "contact_content": "GitHub Pages 是静态网站，暂不支持表单。请通过以下方式联系我：",
@@ -83,6 +85,6 @@
     "contact_copy_success": "已复制到剪贴板！",
     "contact_video": "观看我的视频介绍",
     "footer_copyright": "© 2025 Shirenzhi. 保留所有权利。",
-    "footer_follow": "关注我"
+    "footer_follow  _follow": "关注我"
   }
 }
