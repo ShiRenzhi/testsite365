@@ -12,9 +12,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   if (window.scrollY > 50) {
-    nav.classList.add('bg-blue-800');
+    nav.classList.add('bg-gray-900');
   } else {
-    nav.classList.remove('bg-blue-800');
+    nav.classList.remove('bg-gray-900');
   }
 });
 
@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 fetch('languages.json')
   .then(response => response.json())
   .then(languages => {
-    const switcher = document.getElementById('language-switcher');
+    const buttons = document.querySelectorAll('.lang-btn');
     const elements = document.querySelectorAll('[data-key]');
 
     function updateLanguage(lang) {
@@ -31,14 +31,43 @@ fetch('languages.json')
         element.textContent = languages[lang][key];
       });
       document.documentElement.lang = lang;
+      localStorage.setItem('language', lang);
     }
 
-    switcher.addEventListener('change', () => {
-      updateLanguage(switcher.value);
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        updateLanguage(button.getAttribute('data-lang'));
+      });
     });
 
-    // Set default language based on browser or stored preference
+    // Set default language
     const savedLang = localStorage.getItem('language') || 'en';
-    switcher.value = savedLang;
     updateLanguage(savedLang);
   });
+
+// Carousel
+const carouselInner = document.querySelector('.carousel-inner');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.carousel-prev');
+const nextBtn = document.querySelector('.carousel-next');
+let currentIndex = 0;
+
+function updateCarousel() {
+  carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+  updateCarousel();
+});
+
+// Auto-play carousel
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  updateCarousel();
+}, 5000);

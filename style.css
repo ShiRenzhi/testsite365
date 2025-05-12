@@ -1,55 +1,83 @@
 /* Custom font */
-.font-roboto {
-  font-family: 'Roboto', sans-serif;
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Animation effects */
+/* Animations */
 .animate-fade-in {
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 1.5s ease-in;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
+  0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-.animate-scale {
-  transition: transform 0.3s ease;
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
 }
 
-.animate-scale:hover {
-  transform: scale(1.05);
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Card hover effect */
 .shadow-lg:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensure navbar stays fixed */
+/* Navbar */
 nav {
+  transition: background-color 0.3s, backdrop-blur 0.3s;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-prev, .carousel-next {
   transition: background-color 0.3s;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .text-6xl {
+    font-size: 3rem;
+  }
   .text-5xl {
     font-size: 2.5rem;
-  }
-  .text-4xl {
-    font-size: 2rem;
   }
   .grid-cols-3 {
     grid-template-columns: 1fr;
   }
+  .h-96 {
+    height: 16rem;
+  }
 }
 
-/* Custom button styling */
+/* Glassmorphism effect */
+.bg-opacity-80 {
+  backdrop-filter: blur(10px);
+}
+
+/* Button styling */
 .btn-primary {
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #dbeafe;
   transform: scale(1.1);
 }

@@ -45,54 +45,55 @@
   <meta name="description" content="Learn more about Shirenzhi and this website.">
   <title>About - Shirenzhi's Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gradient-to-r from-blue-100 to-purple-100 font-roboto text-gray-800">
-  <nav class="bg-blue-700 text-white fixed w-full top-0 shadow-lg z-10">
+<body class="bg-gray-900 text-gray-100 font-poppins">
+  <nav class="bg-gray-800 bg-opacity-90 backdrop-blur-sm fixed w-full top-0 z-20">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold"><i class="fas fa-home mr-2"></i>Shirenzhi</a>
-      <div class="flex items-center space-x-4">
+      <a href="index.html" class="text-2xl font-bold text-blue-400"><i class="fas fa-code mr-2"></i>Shirenzhi</a>
+      <div class="flex items-center space-x-6">
         <div class="space-x-4">
-          <a href="index.html" class="hover:text-blue-200 transition" data-key="nav_home">Home</a>
-          <a href="about.html" class="hover:text-blue-200 transition" data-key="nav_about">About</a>
-          <a href="contact.html" class="hover:text-blue-200 transition" data-key="nav_contact">Contact</a>
+          <a href="index.html" class="hover:text-blue-400 transition" data-key="nav_home">Home</a>
+          <a href="about.html" class="hover:text-blue-400 transition" data-key="nav_about">About</a>
+          <a href="contact.html" class="hover:text-blue-400 transition" data-key="nav_contact">Contact</a>
         </div>
-        <select id="language-switcher" class="bg-blue-800 text-white rounded px-2 py-1">
-          <option value="en">English</option>
-          <option value="zh">中文</option>
-        </select>
+        <div class="flex space-x-2">
+          <button id="lang-en" class="lang-btn bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-500 transition" data-lang="en"><i class="fas fa-globe mr-1"></i><span data-key="lang_en">English</span></button>
+          <button id="lang-zh" class="lang-btn bg-pink-600 text-white px-3 py-1 rounded-full hover:bg-pink-500 transition" data-lang="zh"><i class="fas fa-globe mr-1"></i><span data-key="lang_zh">中文</span></button>
+        </div>
       </div>
     </div>
   </nav>
 
-  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 mt-16">
+  <header class="relative h-96 flex items-center justify-center bg-gradient-to-r from-blue-600 to-pink-600">
     <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-4 animate-fade-in" data-key="about_title">About Me</h1>
-      <p class="text-lg" data-key="about_subtitle">Discover the story behind this website</p>
+      <h1 class="text-5xl font-bold mb-4 animate-fade-in text-white" data-key="about_title">About Shirenzhi</h1>
+      <p class="text-xl text-gray-200" data-key="about_subtitle">The story behind my digital journey</p>
     </div>
+    <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
   </header>
 
-  <section class="container mx-auto py-12">
-    <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4" data-key="about_title">I'm Shirenzhi</h2>
-      <p class="text-gray-600 mb-4" data-key="about_content1">Welcome to my personal website! This is a space where I showcase my creativity, technology, and projects. I'm passionate about front-end development, open-source communities, and modern web design.</p>
-      <p class="text-gray-600" data-key="about_content2">This website is hosted on GitHub Pages, built with Tailwind CSS and JavaScript, aiming to provide a seamless user experience. In the future, I plan to add more features like a blog or portfolio. Stay tuned!</p>
+  <section class="container mx-auto py-16">
+    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 text-blue-400" data-key="about_title">I'm Shirenzhi</h2>
+      <p class="text-gray-300 mb-4" data-key="about_content1">Hi, I'm Shirenzhi! This website is my creative hub, where I blend technology and design to share my projects and ideas. I'm passionate about web development and open-source innovation.</p>
+      <p class="text-gray-300 mb-6" data-key="about_content2">Built on GitHub Pages with Tailwind CSS and JavaScript, this site is designed for seamless interaction. Expect more exciting features like blogs and portfolios soon!</p>
       <div class="mt-6">
-        <audio controls class="w-full">
+        <audio controls class="w-full rounded-lg">
           <source src="sample-audio.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <p class="text-gray-600 text-sm mt-2">Listen to a sample audio introduction.</p>
+        <p class="text-gray-400 text-sm mt-2" data-key="about_audio">Listen to my introduction</p>
       </div>
     </div>
   </section>
 
-  <footer class="bg-gray-800 text-white py-6">
+  <footer class="bg-gray-800 py-8">
     <div class="container mx-auto text-center">
-      <p data-key="footer_copyright">© 2025 Shirenzhi. All rights reserved.</p>
-      <p class="mt-2" data-key="footer_follow">Follow me: <a href="https://github.com/ShiRenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
+      <p class="text-gray-300" data-key="footer_copyright">© 2025 Shirenzhi. All rights reserved.</p>
+      <p class="mt-2 text-gray-300" data-key="footer_follow">Follow me: <a href="https://github.com/ShiRenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
     </div>
   </footer>
 
