@@ -53,6 +53,19 @@ header video {
   z-index: 0;
 }
 
+/* Circular video */
+.circular-video {
+  border-radius: 50%;
+  overflow: hidden;
+  clip-path: circle(50%);
+  object-fit: cover;
+}
+
+/* Video container */
+.video-container {
+  @apply relative bg-cover bg-center h-96 rounded-xl shadow-lg;
+}
+
 /* Gallery */
 .gallery-grid {
   @apply grid-cols-1 md:grid-cols-3 gap-8;
@@ -151,6 +164,17 @@ header video {
   }
   .timeline-event {
     @apply w-full;
+  }
+  .circular-video {
+    @apply w-56 h-56;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (min-width: 769px) {
+  .circular-video {
+    @apply w-80 h-80;
   }
 }
 
