@@ -1,0 +1,90 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="通过 GitHub 或其他方式联系 Shirenzhi。">
+  <title>联系 - Shirenzhi 的网站</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-roboto text-gray-800">
+  <nav class="bg-blue-700 text-white fixed w-full top-0 shadow-lg z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold">Shirenzhi</a>
+      <div class="space-x-4">
+        <a href="index.html" class="hover:text-blue-200 transition">首页</a>
+        <a href="about.html" class="hover:text-blue-200 transition">关于</a>
+        <a href="contact.html" class="hover:text-blue-200 transition">联系</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-blue-600 text-white py-16 mt-16">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-4">联系我</h1>
+      <p class="text-lg">随时通过以下方式与我取得联系</p>
+    </div>
+  </header>
+
+  <section class="container mx-auto py-12">
+    <div class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">发送消息</h2>
+      <p class="text-gray-600 mb-4">由于 GitHub Pages 是静态网站，暂时无法处理表单。你可以通过以下方式联系我：</p>
+      <ul class="text-gray-600 space-y-2">
+        <li>GitHub: <a href="https://github.com/shirenzhi" class="text-blue-500 hover:underline">shirenzhi</a></li>
+        <li>邮箱: <a href="mailto:your.email@example.com" class="text-blue-500 hover:underline">your.email@example.com</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Shirenzhi. 保留所有权利。</p>
+      <p class="mt-2">关注我：<a href="https://github.com/shirenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
