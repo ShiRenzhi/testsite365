@@ -76,16 +76,38 @@
   </header>
 
   <section class="container mx-auto py-16">
-    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-xl shadow-lg max-w-lg mx-auto">
-      <h2 class="text-3xl font-semibold mb-6 text-blue-400" data-key="contact_title">Contact Me</h2>
-      <p class="text-gray-300 mb-6" data-key="contact_content">GitHub Pages is static, so forms aren't available yet. Reach me through:</p>
-      <ul class="text-gray-300 space-y-4">
-        <li><i class="fab fa-github mr-2 text-blue-400"></i><span data-key="contact_github">GitHub</span>: <a href="https://github.com/ShiRenzhi" class="text-blue-400 hover:underline">ShiRenzhi</a></li>
-        <li><i class="fas fa-envelope mr-2 text-blue-400"></i><span data-key="contact_email">Email</span>: <a href="mailto:your.email@example.com" class="text-blue-400 hover:underline">your.email@example.com</a></li>
-      </ul>
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 text-blue-400 text-center" data-key="contact_title">Contact Me</h2>
+      <p class="text-gray-300 mb-8 text-center" data-key="contact_content">GitHub Pages is static, so forms aren't available yet. Reach me through:</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-blue-500 rounded-xl p-6 flex items-center justify-center">
+              <i class="fab fa-github text-5xl text-white"></i>
+            </div>
+            <div class="flip-card-back bg-gray-800 bg-opacity-80 rounded-xl p-6 text-center">
+              <h3 class="text-xl font-semibold text-pink-400 mb-2" data-key="contact_github">GitHub</h3>
+              <p class="text-gray-300 mb-4" data-key="contact_github_desc">Follow or message me on GitHub</p>
+              <a href="https://github.com/ShiRenzhi" class="text-blue-400 hover:underline">ShiRenzhi</a>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-pink-500 rounded-xl p-6 flex items-center justify-center">
+              <i class="fas fa-envelope text-5xl text-white"></i>
+            </div>
+            <div class="flip-card-back bg-gray-800 bg-opacity-80 rounded-xl p-6 text-center">
+              <h3 class="text-xl font-semibold text-pink-400 mb-2" data-key="contact_email">Email</h3>
+              <p class="text-gray-300 mb-4" data-key="contact_email_desc">Send me an email</p>
+              <button class="copy-email bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-400 transition" data-email="your.email@example.com">Copy Email</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="mt-8">
         <iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sample Video" frameborder="0" allowfullscreen></iframe>
-        <p class="text-gray-400 text-sm mt-2" data-key="contact_video">Watch my video intro</p>
+        <p class="text-gray-400 text-sm mt-2 text-center" data-key="contact_video">Watch my video intro</p>
       </div>
     </div>
   </section>
