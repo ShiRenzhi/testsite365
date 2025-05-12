@@ -1,4 +1,3 @@
-```json
 {
   "en": {
     "nav_home": "Home",
@@ -7,7 +6,8 @@
     "lang_en": "English",
     "lang_zh": "中文",
     "index_hero_title": "Explore My Digital World",
-    "index_hero_subtitle": "A showcase of creativity, technology, and innovation",
+    "index_hero_subtitle": "Watch my software in action through a dynamic demo",
+    "index_hero_description": "A dynamic video showcasing an abstract digital art animation with glowing particles and colorful light trails.",
     "index_hero_button": "Discover Now",
     "index_gallery_title": "Music Gallery",
     "gallery_filter_all": "All",
@@ -37,7 +37,7 @@
     "contact_content": "GitHub Pages is static, so forms aren't available yet. Reach me through:",
     "contact_github": "GitHub",
     "contact_email": "Email",
-    "contact_github descends": "Follow or message me on GitHub",
+    "contact_github_desc": "Follow or message me on GitHub",
     "contact_email_desc": "Send me an email",
     "contact_copy_success": "Copied to clipboard!",
     "contact_video": "Watch my video intro",
@@ -56,7 +56,8 @@
     "lang_en": "English",
     "lang_zh": "中文",
     "index_hero_title": "探索我的数字世界",
-    "index_hero_subtitle": "展示创意、技术与创新的平台",
+    "index_hero_subtitle": "通过动态演示观看我的软件运行",
+    "index_hero_description": "一个展示抽象数字艺术动画的动态视频，包含发光粒子和彩色光轨。",
     "index_hero_button": "立即探索",
     "index_gallery_title": "音乐画廊",
     "gallery_filter_all": "全部",
@@ -99,4 +100,3 @@
     "footer_follow": "关注我"
   }
 }
-```
