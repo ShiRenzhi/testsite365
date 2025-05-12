@@ -98,9 +98,11 @@
           <a href="about.html" class="hover:text-blue-400 transition" data-key="nav_about">About</a>
           <a href="contact.html" class="hover:text-blue-400 transition" data-key="nav_contact">Contact</a>
         </div>
-        <div class="flex space-x-2">
-          <button id="lang-en" class="lang-btn bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-500 transition" data-lang="en"><i class="fas fa-globe mr-1"></i><span data-key="lang_en">English</span></button>
-          <button id="lang-zh" class="lang-btn bg-pink-600 text-white px-3 py-1 rounded-full hover:bg-pink-500 transition" data-lang="zh"><i class="fas fa-globe mr-1"></i><span data-key="lang_zh">中文</span></button>
+        <div class="flex items-center">
+          <select id="lang-select" class="lang-select bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-500 transition focus:outline-none">
+            <option value="en" data-key="lang_en">English</option>
+            <option value="zh" data-key="lang_zh">中文</option>
+          </select>
         </div>
       </div>
     </div>

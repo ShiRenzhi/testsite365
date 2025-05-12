@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 fetch('languages.json')
   .then(response => response.json())
   .then(languages => {
-    const buttons = document.querySelectorAll('.lang-btn');
+    const select = document.getElementById('lang-select');
     const elements = document.querySelectorAll('[data-key]');
 
     function updateLanguage(lang) {
@@ -34,13 +34,14 @@ fetch('languages.json')
       localStorage.setItem('language', lang);
     }
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        updateLanguage(button.getAttribute('data-lang'));
+    if (select) {
+      select.addEventListener('change', () => {
+        updateLanguage(select.value);
       });
-    });
+    }
 
     const savedLang = localStorage.getItem('language') || 'en';
+    select.value = savedLang; // Set dropdown to saved language
     updateLanguage(savedLang);
   })
   .catch(error => console.error('Error loading languages:', error));
