@@ -1,9 +1,9 @@
-/* 自定义字体 */
+/* Custom font */
 .font-roboto {
   font-family: 'Roboto', sans-serif;
 }
 
-/* 动画效果 */
+/* Animation effects */
 .animate-fade-in {
   animation: fadeIn 1s ease-in;
 }
@@ -13,17 +13,25 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 卡片悬浮效果 */
-.shadow-md:hover {
+.animate-scale {
+  transition: transform 0.3s ease;
+}
+
+.animate-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Card hover effect */
+.shadow-lg:hover {
   transform: translateY(-5px);
 }
 
-/* 确保导航栏在顶部固定 */
+/* Ensure navbar stays fixed */
 nav {
   transition: background-color 0.3s;
 }
 
-/* 响应式调整 */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .text-5xl {
     font-size: 2.5rem;
@@ -31,4 +39,17 @@ nav {
   .text-4xl {
     font-size: 2rem;
   }
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom button styling */
+.btn-primary {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #dbeafe;
+  transform: scale(1.1);
 }

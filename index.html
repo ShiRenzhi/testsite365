@@ -38,67 +38,87 @@
         return gk_fileData[filename] || "";
         }
         </script><!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="欢迎访问我的个人网站，展示我的作品和信息。">
-  <meta name="keywords" content="个人网站, GitHub Pages, Shirenzhi">
-  <meta name="author" content="Shirenzhi">
-  <title>首页 - Shirenzhi 的网站</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  devis.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 font-roboto text-gray-800">
-  <!-- 导航栏 -->
+<body class="bg-gradient-to-r from-blue-100 to-purple-100 font-roboto text-gray-800">
+  <!-- Navigation Bar -->
   <nav class="bg-blue-700 text-white fixed w-full top-0 shadow-lg z-10">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold">Shirenzhi</a>
-      <div class="space-x-4">
-        <a href="index.html" class="hover:text-blue-200 transition">首页</a>
-        <a href="about.html" class="hover:text-blue-200 transition">关于</a>
-        <a href="contact.html" class="hover:text-blue-200 transition">联系</a>
+      <a href="index.html" class="text-2xl font-bold"><i class="fas fa-home mr-2"></i>Shirenzhi</a>
+      <div class="flex items-center space-x-4">
+        <div class="space-x-4">
+          <a href="index.html" class="hover:text-blue-200 transition" data-key="nav_home">Home</a>
+          <a href="about.html" class="hover:text-blue-200 transition" data-key="nav_about">About</a>
+          <a href="contact.html" class="hover:text-blue-200 transition" data-key="nav_contact">Contact</a>
+        </div>
+        <select id="language-switcher" class="bg-blue-800 text-white rounded px-2 py-1">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
       </div>
     </div>
   </nav>
 
-  <!-- 英雄部分 -->
-  <header class="bg-blue-600 text-white py-20 mt-16">
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-24 mt-16">
     <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold mb-4 animate-fade-in">欢迎来到我的网站</h1>
-      <p class="text-xl mb-6">一个展示创意与技术的个性化空间</p>
-      <a href="#intro" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">了解更多</a>
+      <h1 class="text-5xl font-bold mb-4 animate-fade-in" data-key="index_title">Welcome to My Website</h1>
+      <p class="text-xl mb-6" data-key="index_subtitle">A personalized space showcasing creativity and technology</p>
+      <a href="#intro" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition transform hover:scale-105" data-key="index_button">Learn More</a>
     </div>
   </header>
 
-  <!-- 简介部分 -->
+  <!-- Introduction Section -->
   <section id="intro" class="container mx-auto py-12">
-    <h2 class="text-3xl font-bold text-center mb-8">关于我的网站</h2>
+    <h2 class="text-3xl font-bold text-center mb-8" data-key="index_section_title">About My Website</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-2">创意设计</h3>
-        <p class="text-gray-600">使用现代化的前端技术，打造美观且响应式的页面。</p>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105">
+        <h3 class="text-xl font-semibold mb-2" data-key="index_card1_title">Creative Design</h3>
+        <p class="text-gray-600" data-key="index_card1_text">Built with modern front-end technologies for a beautiful, responsive experience.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-2">开源精神</h3>
-        <p class="text-gray-600">所有代码托管在 GitHub，欢迎探索和贡献。</p>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105">
+        <h3 class="text-xl font-semibold mb-2" data-key="index_card2_title">Open Source</h3>
+        <p class="text-gray-600" data-key="index_card2_text">All code is hosted on GitHub, open for exploration and contribution.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-2">持续更新</h3>
-        <p class="text-gray-600">定期添加新内容，保持网站活力。</p>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105">
+        <h3 class="text-xl font-semibold mb-2" data-key="index_card3_title">Continuous Updates</h3>
+        <p class="text-gray-600" data-key="index_card3_text">Regularly updated with new content to keep the site vibrant.</p>
       </div>
     </div>
   </section>
 
-  <!-- 页脚 -->
+  <!-- Media Section -->
+  <section class="container mx-auto py-12">
+    <h2 class="text-3xl font-bold text-center mb-8" data-key="index_media_title">My Gallery</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow-lg">
+        <img src="sample-image.jpg" alt="Sample Image" class="w-full h-48 object-cover rounded-lg mb-4">
+        <p class="text-gray-600">A sample image showcasing my work.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image" class="w-full h-48 object-cover rounded-lg mb-4">
+        <p class="text-gray-600">Another image from my collection.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image" class="w-full h-48 object-cover rounded-lg mb-4">
+        <p class="text-gray-600">Explore more in my gallery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto text-center">
-      <p>© 2025 Shirenzhi. 保留所有权利。</p>
-      <p class="mt-2">关注我：<a href="https://github.com/shirenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
+      <p data-key="footer_copyright">© 2025 Shirenzhi. All rights reserved.</p>
+      <p class="mt-2" data-key="footer_follow">Follow me: <a href="https://github.com/ShiRenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
     </div>
   </footer>
 
   <script src="script.js"></script>
-</body>
+</body,>
 </html>

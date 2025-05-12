@@ -38,47 +38,61 @@
         return gk_fileData[filename] || "";
         }
         </script><!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="了解更多关于 Shirenzhi 和这个网站的信息。">
-  <title>关于 - Shirenzhi 的网站</title>
+  <meta name="description" content="Learn more about Shirenzhi and this website.">
+  <title>About - Shirenzhi's Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 font-roboto text-gray-800">
+<body class="bg-gradient-to-r from-blue-100 to-purple-100 font-roboto text-gray-800">
   <nav class="bg-blue-700 text-white fixed w-full top-0 shadow-lg z-10">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold">Shirenzhi</a>
-      <div class="space-x-4">
-        <a href="index.html" class="hover:text-blue-200 transition">首页</a>
-        <a href="about.html" class="hover:text-blue-200 transition">关于</a>
-        <a href="contact.html" class="hover:text-blue-200 transition">联系</a>
+      <a href="index.html" class="text-2xl font-bold"><i class="fas fa-home mr-2"></i>Shirenzhi</a>
+      <div class="flex items-center space-x-4">
+        <div class="space-x-4">
+          <a href="index.html" class="hover:text-blue-200 transition" data-key="nav_home">Home</a>
+          <a href="about.html" class="hover:text-blue-200 transition" data-key="nav_about">About</a>
+          <a href="contact.html" class="hover:text-blue-200 transition" data-key="nav_contact">Contact</a>
+        </div>
+        <select id="language-switcher" class="bg-blue-800 text-white rounded px-2 py-1">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
       </div>
     </div>
   </nav>
 
-  <header class="bg-blue-600 text-white py-16 mt-16">
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 mt-16">
     <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-4">关于我</h1>
-      <p class="text-lg">了解这个网站的背后故事</p>
+      <h1 class="text-4xl font-bold mb-4 animate-fade-in" data-key="about_title">About Me</h1>
+      <p class="text-lg" data-key="about_subtitle">Discover the story behind this website</p>
     </div>
   </header>
 
   <section class="container mx-auto py-12">
-    <div class="bg-white p-8 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">我是 Shirenzhi</h2>
-      <p class="text-gray-600 mb-4">欢迎来到我的个人网站！这里是我展示创意、技术和项目的空间。我对前端开发、开源社区和现代网页设计充满热情。</p>
-      <p class="text-gray-600">这个网站使用 GitHub Pages 托管，结合 Tailwind CSS 和 JavaScript 构建，旨在提供流畅的用户体验。未来，我计划添加更多功能，如博客、作品集等，敬请期待！</p>
+    <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4" data-key="about_title">I'm Shirenzhi</h2>
+      <p class="text-gray-600 mb-4" data-key="about_content1">Welcome to my personal website! This is a space where I showcase my creativity, technology, and projects. I'm passionate about front-end development, open-source communities, and modern web design.</p>
+      <p class="text-gray-600" data-key="about_content2">This website is hosted on GitHub Pages, built with Tailwind CSS and JavaScript, aiming to provide a seamless user experience. In the future, I plan to add more features like a blog or portfolio. Stay tuned!</p>
+      <div class="mt-6">
+        <audio controls class="w-full">
+          <source src="sample-audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p class="text-gray-600 text-sm mt-2">Listen to a sample audio introduction.</p>
+      </div>
     </div>
   </section>
 
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto text-center">
-      <p>© 2025 Shirenzhi. 保留所有权利。</p>
-      <p class="mt-2">关注我：<a href="https://github.com/shirenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
+      <p data-key="footer_copyright">© 2025 Shirenzhi. All rights reserved.</p>
+      <p class="mt-2" data-key="footer_follow">Follow me: <a href="https://github.com/ShiRenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
     </div>
   </footer>
 

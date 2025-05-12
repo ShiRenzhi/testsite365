@@ -38,50 +38,36 @@
         return gk_fileData[filename] || "";
         }
         </script><!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="通过 GitHub 或其他方式联系 Shirenzhi。">
-  <title>联系 - Shirenzhi 的网站</title>
+  <meta name="description" content="Contact Shirenzhi via GitHub or other methods.">
+  <title>Contact - Shirenzhi's Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 font-roboto text-gray-800">
+<body class="bg-gradient-to-r from-blue-100 to-purple-100 font-roboto text-gray-800">
   <nav class="bg-blue-700 text-white fixed w-full top-0 shadow-lg z-10">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold">Shirenzhi</a>
-      <div class="space-x-4">
-        <a href="index.html" class="hover:text-blue-200 transition">首页</a>
-        <a href="about.html" class="hover:text-blue-200 transition">关于</a>
-        <a href="contact.html" class="hover:text-blue-200 transition">联系</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="bg-blue-600 text-white py-16 mt-16">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-4">联系我</h1>
-      <p class="text-lg">随时通过以下方式与我取得联系</p>
-    </div>
-  </header>
-
-  <section class="container mx-auto py-12">
-    <div class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">发送消息</h2>
-      <p class="text-gray-600 mb-4">由于 GitHub Pages 是静态网站，暂时无法处理表单。你可以通过以下方式联系我：</p>
+    <div class="，建立联系</h3>
+      <p class="text-gray-600 mb-4" data-key="contact_content">Since GitHub Pages is a static site, form submissions are not supported yet. You can reach me via:</p>
       <ul class="text-gray-600 space-y-2">
-        <li>GitHub: <a href="https://github.com/shirenzhi" class="text-blue-500 hover:underline">shirenzhi</a></li>
-        <li>邮箱: <a href="mailto:your.email@example.com" class="text-blue-500 hover:underline">your.email@example.com</a></li>
+        <li><i class="fab fa-github mr-2"></i><span data-key="contact_github">GitHub</span>: <a href="https://github.com/ShiRenzhi" class="text-blue-500 hover:underline">ShiRenzhi</a></li>
+        <li><i class="fas fa-envelope mr-2"></i><span data-key="contact_email">Email</span>: <a href="mailto:your.email@example.com" class="text-blue-500 hover:underline">your.email@example.com</a></li>
       </ul>
+      <div class="mt-6">
+        <iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sample Video" frameborder="0" allowfullscreen></iframe>
+        <p class="text-gray-600 text-sm mt-2">Watch a sample video introduction.</p>
+      </div>
     </div>
   </section>
 
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto text-center">
-      <p>© 2025 Shirenzhi. 保留所有权利。</p>
-      <p class="mt-2">关注我：<a href="https://github.com/shirenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
+      <p data-key="footer_copyright">© 2025 Shirenzhi. All rights reserved.</p>
+      <p class="mt-2" data-key="footer_follow">Follow me: <a href="https://github.com/ShiRenzhi" class="text-blue-400 hover:underline">GitHub</a></p>
     </div>
   </footer>
 
