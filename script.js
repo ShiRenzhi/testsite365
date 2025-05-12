@@ -28,7 +28,7 @@ fetch('languages.json')
     function updateLanguage(lang) {
       elements.forEach(element => {
         const key = element.getAttribute('data-key');
-        element.textContent = languages[lang][key];
+        element.textContent = languages[lang][key] || element.textContent; // Fallback to current text
       });
       document.documentElement.lang = lang;
       localStorage.setItem('language', lang);
@@ -43,7 +43,8 @@ fetch('languages.json')
     // Set default language
     const savedLang = localStorage.getItem('language') || 'en';
     updateLanguage(savedLang);
-  });
+  })
+  .catch(error => console.error('Error loading languages:', error));
 
 // Carousel
 const carouselInner = document.querySelector('.carousel-inner');
@@ -71,3 +72,11 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % carouselItems.length;
   updateCarousel();
 }, 5000);
+
+// Handle image loading errors
+document.querySelectorAll('.carousel-item img').forEach(img => {
+  img.addEventListener('error', () => {
+    img.src = 'https://via.placeholder.com/1200x400?text=Image+Not+Found';
+    img.alt = 'Image Not Found';
+  });
+});
